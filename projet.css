@@ -1,0 +1,356 @@
+
+html{
+overflow-x: hidden;
+}
+
+*{
+    box-sizing:border-box;
+    }
+
+@font-face {
+    font-family: GreatVibes-Regular;
+    src: url(./fonts/GreatVibes-Regular.ttf);
+}
+ 
+@font-face {
+    font-family:FrankRuhlLibre-Medium ;
+    src: url(./fonts/FrankRuhlLibre-Medium.ttf);
+    
+     }
+@font-face {
+ font-family:FrankRuhlLibre-Regular ;
+src: url(./fonts/FrankRuhlLibre-Regular.ttf)
+        
+ }
+    
+body{
+    margin:0;
+    width:100%;
+    position:relative;
+    height: 100vh;
+} 
+
+ header{
+     width: 100%; 
+ }
+
+ nav{
+     display: flex;
+     justify-content: space-between;
+     justify-items: center;
+     height: 65px;
+     box-shadow: -2px 3px 10px 1px #808080a8;
+     position: relative;
+    z-index: 1;
+    }
+
+ nav #logo{
+    margin-left: 45px;
+    font-family: GreatVibes-Regular;
+    font-size:36px;
+    margin-top: 10px;
+ }
+
+ nav ul{
+     list-style-type: none;
+     position:absolute;
+     right: 200px;
+     top:-16px;
+
+    }
+ nav ul li{
+    
+    display: inline-block;
+    padding:10px 50px;
+   
+    font-size: 30px;
+ }
+ nav ul li:hover{
+     background-color: #eee;
+     border-bottom: solid 1px black;
+ }
+ nav ul a{
+    text-decoration: none;
+    color: black;
+ }
+ .hero{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: calc(100vh - 65px);
+    position:relative;
+ }
+ .hero .hero-introduction{
+    position: absolute;
+    width: 60%;
+    text-align: center;
+    top: 8%;
+    font-size: 34px;
+ }
+
+ .hero-introduction a {
+     border-color: black;
+     position: relative;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px 40px;
+    text-decoration: none;
+    color:black;
+ }
+ .hero-introduction a:hover:before{
+    content: "";
+    left: 0;
+    top:0;
+    position:absolute;
+    z-index: -1;
+    height: 100%;
+    background-color: #7a95bf;
+    animation: move 0.5s linear forwards;
+ }
+ @keyframes move {
+     0% {width: 0%; opacity: 0;}
+     100% {width: 100%; opacity: 1;}
+ }
+
+ .hero-images{
+    height: calc(100vh - 65px);
+    position: relative;
+    width: 50%;
+    background-color: #eee;
+    height: 100vh;
+    margin-left: 55%;  
+     }
+    
+     .hero-elena{
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        bottom: 0;
+        background-attachment: scroll;
+    }
+
+
+
+/* trying nimation  */
+
+    .plant1{
+    position: absolute;
+    width: 64%;
+    height: calc(100vh - 65px);
+    bottom: 0;
+    left:-20%;
+
+    animation: mouvement 1s linear forwards;
+    
+}
+@keyframes mouvement {
+    0%{ 
+   
+        transform: translateY(20%) rotateY(90deg);
+    }
+    100%{
+        
+        transform: translateY(0%) rotateY(0deg);
+    }
+}
+
+.plant2{
+    position: absolute;
+    width: 52%;
+    height: 74vh;
+    bottom: 0;
+    left:50%;
+    animation: mouvement2 1s 1s linear forwards;
+}
+@keyframes mouvement2 {
+    0%{ 
+   
+        transform: translateY(20%) rotateY(-90deg);
+    }
+    100%{
+        
+        transform: translateY(0%) rotateY(0deg);
+    }
+}
+/* ---------------------------------------- */
+#about{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+.about-image h5{
+    font-size: 30px;
+    color:black;
+    letter-spacing: 18px;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+.about-image{
+    position: relative;
+    height: 100%;
+}
+.about-image img{
+    height:100%;
+    object-fit: cover;
+}
+
+.about-text{
+    background-color: rgb(66, 66, 66);
+    justify-content: center;
+    width: 100%;
+    padding:0 20px;
+
+}
+.about-text h2{
+    margin-left: 70px;
+    font-family: GreatVibes-Regular;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-life , .about-work , .about-contact{
+    margin: 20px 70px;
+    font-size: 25px;
+    padding-bottom: 1px;}
+
+.about-text h3{
+    margin-left: 70px;
+    font-family: FrankRuhlLibre-Medium ;
+}
+.gallery{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 50% 50% ;
+    grid-template-areas: "g1 g1 g2"
+                          "g3 g4 g2";
+    
+                        }
+
+.gallery1{
+    
+    grid-area: g1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery2{
+    
+      grid-area: g2;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+}
+
+.gallery3{
+    
+    grid-area: g3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery4{
+   
+    grid-area: g4;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+
+}
+form button{
+    cursor:pointer;;
+}
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 89px);
+}
+.contact img{
+    flex-grow: 1;
+    flex-basis: 100px;
+    height: calc(100vh - 89px);
+    width: 35%;
+        
+
+}
+.contact .form-wrapper{
+    flex-grow: 1;
+    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.form-wrapper h2{
+    font-size:50px;
+    line-height: 65px;
+    
+   
+font-family: FrankRuhlLibre-Regular ;
+    
+}
+.form-wrapper h2 span{
+    color: rgba(144,98,114,255);
+    font-size: 60px;
+}
+
+label{
+    font-size: 24px;
+    margin: 20px;
+
+}
+input[type="email"]{
+    background-color: rgba(65,65,65,255);
+    padding: 11px 40px;
+    margin:30px 0;
+    font-size: 20px;
+}
+button{
+    background-color: rgba(144,98,114,255);
+    padding: 9px 135px;
+    border-color: rgba(144,98,114,255);
+    color:white;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+ button:hover{
+    background-color: rgb(37, 30, 30);
+} 
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(65,65,65,255);
+    
+}
+footer ul {
+    list-style-type: none;
+   
+    
+    
+}
+footer ul li{
+    display: inline-block;
+    margin-right: 200px;
+    margin-top: 20px;
+    
+}
+footer h4{
+    font-size: 30px;
+    color:white;
+    margin: 20px;
+    
+}
+
